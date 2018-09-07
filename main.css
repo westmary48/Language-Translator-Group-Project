@@ -1,0 +1,7 @@
+body {
+    background-color: blue;
+}
+.textarea {
+    display: flex;
+    flex-wrap: wrap;
+}
