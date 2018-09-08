@@ -21,19 +21,47 @@ let languageTranslator = {
         { english: "and", sweedish: "och" },
         { english: "happy", sweedish: "gott" },
         { english: "new", sweedish: "nytt" },
-        { english: "year", sweedish: "år" } 
+        { english: "year", sweedish: "år" }
     ]
+}
+const printToDom = (stringToPrint, divId) => {
+    const selectedDiv = document.getElementById(divId);
+    selectedDiv.innerHTML = stringToPrint;
+};
+let english = document.getElementById("id of the textbox");
 
-    const languageStringBuilder() => {
+const spanishStringBuilder = () => {
     let newString = '';
-    for (let i = 0); i<languageTranslator.spanish.length; i++{
-        newString += `<div class="spanish">`;
-        newString += `<h3>$languageTranslator.spanish[i].english}</h3>`;
-        newString += `<h3>$languageTranslator.spanish[i].spanish}</h3>`;
+    for (let i = 0; i < languageTranslator.SpanishTranslation.length; i++) {
+        newString += `<div class="Spanish">`;
+        newString += `<h3>${languageTranslator.SpanishTranslation[i].english}</h3>`;
+        newString += `<h3>${languageTranslator.SpanishTranslation[i].spanish}</h3>`;
         newString += `</div>`;
     }
+    printToDom(newString, 'SpanishTranslation');
 
-    printToDom(newString, 'spanish');
-
-}
+};
+const sweedishStringBuilder = () => {
+    let newString = '';
+    for (let i = 0; i < languageTranslator.SweedishTranslation.length; i++) {
+        // newString += `<div class="Sweedish">`;
+        // newString += `<h3>${languageTranslator.SweedishTranslation[i].english}</h3>`;
+        // newString += `<h3>${languageTranslator.SweedishTranslation[i].spanish}</h3>`;
+        // newString += `</div>`;
+    }
+    printToDom(newString, 'SweedishTranslation');
+};
+const germanStringBuilder = () => {
+    let newString = '';
+    for (let i = 0; i < languageTranslator.GermanTranslation.length; i++) {
+        // newString += `<div class="German">`;
+        // newString += `<h3>${languageTranslator.GermanTranslation[i].english}</h3>`;
+        // newString += `<h3>${languageTranslator.GermanTranslation[i].german}</h3>`;
+        // newString += `</div>`;
+    }
+    printToDom(newString, 'GermanTranslation');
+};
+spanishStringBuilder();
+germanStringBuilder();
+sweedishStringBuilder();
 
