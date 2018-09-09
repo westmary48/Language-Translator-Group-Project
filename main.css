@@ -3,5 +3,17 @@ body {
 }
 .textarea {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+}
+.title {
+    display: flex;
+    justify-content: center;
+}
+.button {
+    display: flex;
+    justify-content: center;
+}
+.answer {
+    display: flex;
+    justify-content: center;
 }
