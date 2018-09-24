@@ -8,12 +8,36 @@ const printToDom = (stringToPrint, divId) => {
 }
 
 let userinput = document.getElementById("textarea");
-let spanishUserInput = userinput.value.split(" ");
 
-const spanishStringBuilder = () => {
+
+let spanishStringBuilder = () => {
     let inputString = '';
-    for (let i = 0; i < spanishUserInput.length; i++) {
-        inputString += spanishTranslation[spanishUserInput.value[i]]
+    let arrayUserInput = userinput.value.split(' ');
+    for (let i = 0; i < arrayUserInput.length; i++) {
+        inputString += spanishTranslation[arrayUserInput[i]] + ' '
          printToDom(inputString, 'output');
     }
 }
+
+let frenchStringBuilder = () => {
+    let inputString = '';
+    let arrayUserInput = userinput.value.split(' ');
+    for (let i = 0; i < arrayUserInput.length; i++) {
+        inputString += frenchTranslation[arrayUserInput[i]] + ' '
+        printToDom(inputString, 'output');
+    }
+}
+
+let dutchStringBuilder = () => {
+    let inputString = '';
+    let arrayUserInput = userinput.value.split(' ');
+    for (let i = 0; i < arrayUserInput.length; i++) {
+        inputString += dutchTranslation[arrayUserInput[i]] + ' '
+        printToDom(inputString, 'output');
+    }
+}
+
+document.getElementById("SpanishButton").addEventListener("click", spanishStringBuilder);
+document.getElementById("FrenchButton").addEventListener("click", frenchStringBuilder);
+document.getElementById("DutchButton").addEventListener("click", dutchStringBuilder);
+

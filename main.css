@@ -1,9 +1,10 @@
 body {
-    background-color: blue;
+    background-image: url(http://longwallpapers.com/Desktop-Wallpaper/holiday-wallpaper-hd-resolution-For-Desktop-Wallpaper.jpg);
 }
 .textarea {
     display: flex;
     justify-content: center;
+    padding: 10px;
 }
 .title {
     display: flex;
@@ -16,4 +17,9 @@ body {
 .answer {
     display: flex;
     justify-content: center;
+}
+
+.Instructions {
+ display: flex;
+ justify-content: center;
 }
