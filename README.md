@@ -1,6 +1,6 @@
 # Holiday Language Translator 
 
-##Description
+## Description
 
 We made a Holiday Language Translator that translates "Merry Christmas and Happy New Year" in Spanish, Dutch, and French. 
 
